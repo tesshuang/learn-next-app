@@ -47,6 +47,7 @@ const Home = () => (
         padding-top: 80px;
         line-height: 1.15;
         font-size: 48px;
+        color: #297373;
       }
       .title,
       .description {
