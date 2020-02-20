@@ -4,7 +4,7 @@ import posts from '../posts.json';
 import Link from 'next/link';
 import Layout from '../components/layout';
 
-const Blog = () => {
+const Blogs= () => {
   // console.log(Object.entries(posts));
   // const postData = ;
   return (
@@ -54,4 +54,4 @@ const Blog = () => {
 };
 
 
-export default Blog;
+export default Blogs;

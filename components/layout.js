@@ -8,7 +8,6 @@ const containerStyle = {
 }
 
 const Layout = (props) => {
-  console.log(props);
   return (
     <div>
       <Nav />
