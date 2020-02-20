@@ -10,15 +10,20 @@ const Nav = () => (
         </Link>
       </li>
       <li>
-        <Link href="/blogs">
-          <a>Blogs </a>
-        </Link>
-      </li>
-      <li>
         <Link href="/about">
           <a>About</a>
         </Link>
       </li>
+      <li>
+      <Link href="/blogs">
+        <a>Blogs</a>
+      </Link>
+      </li>
+      <li>
+      <Link href="/trips">
+        <a>Trips</a>
+      </Link>
+    </li>
     </ul>
 
     <style jsx>{`
