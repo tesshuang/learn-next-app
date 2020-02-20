@@ -1,6 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
-import Nav from '../components/nav';
+// import Nav from '../components/nav';
+import Layout from '../components/layout';
 
 const About = () => (
   <div>
@@ -8,8 +9,9 @@ const About = () => (
     <title>About</title>
     <link rel="icon" href="/favicon.ico" />
     </Head>
-    <Nav />
-    <h1>About the site</h1>
+    <Layout>
+      <h1>About the site</h1>
+    </Layout>
   </div>
 )
 
