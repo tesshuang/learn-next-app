@@ -1,6 +1,5 @@
 import { useRouter } from 'next/router';
 import posts from '../../posts.json';
-// import Nav from '../../components/nav'
 import Layout from '../../components/layout'
 
 export default () => {
