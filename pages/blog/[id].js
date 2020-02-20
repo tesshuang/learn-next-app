@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router';
 import posts from '../../posts.json';
-import Nav from '../../components/nav'
+// import Nav from '../../components/nav'
+import Layout from '../../components/layout'
 
 export default () => {
   const router = useRouter();
@@ -8,16 +9,17 @@ export default () => {
   if (!post) return <p></p>;
 
   return (
-    <>
-      <Nav />
-      <h1>{post.title}</h1>
-      <p>{post.content}</p>
+    <div>
+      <Layout>
+        <h1>{post.title}</h1>
+        <p>{post.content}</p>
+      </Layout>
       <style jsx>{`
         h1{
           color: green;
         }
       `}
       </style>
-    </>
+    </div>
   )
 };
