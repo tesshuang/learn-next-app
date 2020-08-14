@@ -82,6 +82,9 @@ const Home = () => (
         font-size: 13px;
         color: #333;
       }
+      .box {
+        padding-bottom: 50%;
+      }
     `}</style>
   </div>
 )
