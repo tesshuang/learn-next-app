@@ -2,18 +2,23 @@ import { useState } from 'react';
 import Link from 'next/link';
 
 const Nav = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <header className="bg-teal">
       <div className="flex items-center justify-between px-4 py-3">
         <div>
-          <img className="w-40" src="/logo.png" alt="Learn FE Logo" />
+          <img className="w-32" src="/logo.png" alt="Learn FE Logo" />
         </div>
         <button
           type="button"
-          className="block text-gray-900 hover:text-gray-200"
+          className={`block hover:text-gray-200 md:hidden ${
+            isOpen ? 'text-gray-200' : 'text-gray-900'
+          }`}
+          onClick={() => setIsOpen(() => !isOpen)}
         >
           <svg
-            className="h-6 w-6 fill-current"
+            className="h-8 w-8 fill-current"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 512 512"
           >
@@ -22,7 +27,7 @@ const Nav = () => {
           </svg>
         </button>
       </div>
-      <nav className="px-4 py-2">
+      <nav className={`px-4 py-2 md:block ${isOpen ? 'block' : 'hidden'}`}>
         <ul>
           <li>
             <Link href="/">
