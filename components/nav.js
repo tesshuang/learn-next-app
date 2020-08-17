@@ -5,14 +5,14 @@ const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="bg-teal">
+    <header className="bg-teal sm:flex sm:justify-between sm:items-center">
       <div className="flex items-center justify-between px-4 py-3">
         <div>
           <img className="w-32" src="/logo.png" alt="Learn FE Logo" />
         </div>
         <button
           type="button"
-          className={`block hover:text-gray-200 md:hidden ${
+          className={`block hover:text-gray-200 sm:hidden ${
             isOpen ? 'text-gray-200' : 'text-gray-900'
           }`}
           onClick={() => setIsOpen(() => !isOpen)}
@@ -27,32 +27,32 @@ const Nav = () => {
           </svg>
         </button>
       </div>
-      <nav className={`px-4 py-2 md:block ${isOpen ? 'block' : 'hidden'}`}>
-        <ul>
+      <nav>
+        <ul className={`px-4 py-2 sm:flex ${isOpen ? 'block' : 'hidden'}`}>
           <li>
             <Link href="/">
-              <a className="px-2 py-1 block text-white font-heading hover:bg-teal-300">
+              <a className="px-2 py-1 block text-white font-heading hover:bg-teal-300 sm:ml-2">
                 Home
               </a>
             </Link>
           </li>
           <li>
             <Link href="/about">
-              <a className="px-2 py-1 block text-white font-heading hover:bg-teal-300">
+              <a className="px-2 py-1 block text-white font-heading hover:bg-teal-300 sm:ml-2">
                 About
               </a>
             </Link>
           </li>
           <li>
             <Link href="/blogs">
-              <a className="px-2 py-1 block text-white font-heading hover:bg-teal-300">
+              <a className="px-2 py-1 block text-white font-heading hover:bg-teal-300 sm:ml-2">
                 Blogs
               </a>
             </Link>
           </li>
           <li>
             <Link href="/trips">
-              <a className="px-2 py-1 block text-white font-heading hover:bg-teal-300">
+              <a className="px-2 py-1 block text-white font-heading hover:bg-teal-300 sm:ml-2">
                 Trips
               </a>
             </Link>
