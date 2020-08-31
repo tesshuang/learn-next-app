@@ -2,19 +2,32 @@ import React from 'react';
 
 export const Account = () => (
   <div>
-    <button className="block h-8 w-8 overflow-hidden">
+    <button className="block h-8 w-8 overflow-hidden rounded-full border-2 border-gray-600 focus:outline-none focus:border-white">
       <img
         className="h-full w-full object-cover"
         src="https://source.unsplash.com/100x80/?avatar"
         alt="Avatar"
       />
     </button>
-    <div>
-      <a className="text-gray-100" href="#">
+    <div className="mt-2 py-2 w-48 bg-white rounded-lg shadow-xl">
+      <a
+        href="#"
+        className="block px-4 py-2 text-gray-800 hover:bg-teal hover:text-gray-200"
+      >
         Account settings
       </a>
-      <a href="#">Support</a>
-      <a href="#">Sign out</a>
+      <a
+        href="#"
+        className="block px-4 py-2 text-gray-800 hover:bg-teal hover:text-gray-200"
+      >
+        Support
+      </a>
+      <a
+        href="#"
+        className="block px-4 py-2 text-gray-800 hover:bg-teal hover:text-gray-200"
+      >
+        Sign out
+      </a>
     </div>
   </div>
 );
