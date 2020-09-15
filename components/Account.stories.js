@@ -4,7 +4,7 @@ import { Account } from './Account';
 
 // This default export determines where you story goes in the story list
 export default {
-  title: 'Account',
+  title: 'Components/Account',
   component: Account,
 };
 
