@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { Account } from './Account';
 
 // This default export determines where you story goes in the story list

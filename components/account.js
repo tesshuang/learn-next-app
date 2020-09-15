@@ -21,7 +21,7 @@ export const Account = () => {
     <div>
       <button
         className="z-10 relative block h-8 w-8 overflow-hidden rounded-full border-2 border-gray-600 focus:outline-none focus:border-white"
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={() => setIsOpen(() => !isOpen)}
       >
         <img
           className="h-full w-full object-cover"
