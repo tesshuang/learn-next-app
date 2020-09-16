@@ -1,7 +1,6 @@
-import React from 'react'
-import Head from 'next/head'
-import Layout from '../components/layout'
-import Card from '../components/card'
+import React from 'react';
+import Head from 'next/head';
+import Layout from '../components/layout';
 
 const Home = () => (
   <div>
@@ -15,7 +14,6 @@ const Home = () => (
         <p className="description">
           To get started, edit <code>pages/index.js</code> and save to reload.
         </p>
-        <Card />
         <div className="row">
           <a href="https://nextjs.org/docs" className="card">
             <h3>Documentation &rarr;</h3>
@@ -87,6 +85,6 @@ const Home = () => (
       }
     `}</style>
   </div>
-)
+);
 
-export default Home
+export default Home;

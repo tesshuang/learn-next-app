@@ -1,14 +1,44 @@
-const Card = () => (
-  <div className="md:flex">
-  <div className="md:flex-shrink-0">
-    <img className="rounded-lg md:w-56" src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=448&q=80" width="448" height="299" alt="Woman paying for a purchase" />
-  </div>
-  <div className="mt-4 md:mt-0 md:ml-6">
-    <div className="uppercase tracking-wide text-sm text-indigo-600 font-bold">Marketing</div>
-    <a href="#" className="block mt-1 text-lg leading-tight font-semibold text-gray-900 hover:underline">Finding customers for your new business</a>
-    <p className="mt-2 text-gray-600">Getting a new business off the ground is a lot of hard work. Here are five ideas you can use to find your first customers.</p>
-  </div>
-</div>
-)
+import React from 'react';
+import PropTypes from 'prop-types';
 
-export default Card;
+export const Card = ({ src, alt, category, title, description }) => (
+  <div className="md:flex">
+    <div className="md:flex-shrink-0">
+      <img
+        className="rounded-lg md:w-56"
+        src={src}
+        width="448"
+        height="299"
+        alt={alt}
+      />
+    </div>
+    <div className="mt-4 md:mt-0 md:ml-6 md:flex md:flex-col md:justify-center">
+      <div className="uppercase tracking-wide text-sm text-indigo-600 font-bold">
+        {category}
+      </div>
+      <a
+        href="#"
+        className="block mt-1 text-lg leading-tight font-semibold text-gray-900 hover:underline"
+      >
+        {title}
+      </a>
+      <p className="mt-2 text-gray-600">{description}</p>
+    </div>
+  </div>
+);
+
+Card.PropTypes = {
+  src: PropTypes.string,
+  alt: PropTypes.string,
+  category: PropTypes.oneOf(['HTML', 'CSS', 'JavaScript']),
+  title: PropTypes.string,
+  description: PropTypes.string,
+};
+
+Card.defaultProps = {
+  src: '',
+  alt: 'Mock image placeholder',
+  category: 'JavaScript',
+  title: 'A title',
+  description: 'A description',
+};
